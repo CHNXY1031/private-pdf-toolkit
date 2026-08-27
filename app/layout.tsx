@@ -51,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="border-t border-white/10 px-5 py-10 text-center text-sm text-slate-500">
           <p>Private PDF Toolkit · Files are processed locally in your browser.</p>
           <p className="mt-2">© {new Date().getFullYear()} Built for privacy, speed and everyday work.</p>
-          <a href="https://uptime-pulse-saas.vercel.app/?utm_source=private-pdf-toolkit&amp;utm_medium=referral&amp;utm_campaign=protected_by" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-xs text-slate-600 underline decoration-slate-700 underline-offset-4 transition hover:text-mint">Protected by UptimePulse — Free Website &amp; SSL Monitor</a>
+          <a href="https://uptime-pulse-saas.vercel.app/?utm_source=private-pdf-toolkit&amp;utm_medium=referral&amp;utm_campaign=protected_by" target="_blank" rel="noopener noreferrer nofollow" className="mt-3 inline-block text-xs text-slate-600 underline decoration-slate-700 underline-offset-4 transition hover:text-mint">Protected by UptimePulse — Free Website &amp; SSL Monitor</a>
         </footer>
       </body>
     </html>
