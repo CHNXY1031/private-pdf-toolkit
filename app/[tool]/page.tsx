@@ -3,7 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2, Cpu, Download, LockKeyhole, UploadCloud } from "lucide-react";
 import { notFound } from "next/navigation";
 import PdfToolkit from "@/components/PdfToolkit";
-import { getToolPage, SITE_URL, toolPages } from "@/lib/toolPages";
+import { BASE_URL } from "@/lib/site";
+import { getToolPage, toolPages } from "@/lib/toolPages";
 
 type PageProps = { params: { tool: string } };
 export const dynamicParams = false;
@@ -15,7 +16,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageProps): Metadata {
   const page = getToolPage(params.tool);
   if (!page) return {};
-  const url = `${SITE_URL}/${page.slug}`;
+  const url = `${BASE_URL}/${page.slug}`;
   return {
     title: { absolute: page.metaTitle },
     description: page.description,
@@ -40,7 +41,7 @@ export default function ToolPageRoute({ params }: PageProps) {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "WebApplication", name: page.h1, url: `${SITE_URL}/${page.slug}`, description: page.description, applicationCategory: "UtilitiesApplication", operatingSystem: "Any", browserRequirements: "Requires JavaScript and a modern web browser", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, featureList: ["Client-side processing", "No file uploads", "No account required", "No watermark"] },
+      { "@type": "WebApplication", name: page.h1, url: `${BASE_URL}/${page.slug}`, description: page.description, applicationCategory: "UtilitiesApplication", operatingSystem: "Any", browserRequirements: "Requires JavaScript and a modern web browser", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, featureList: ["Client-side processing", "No file uploads", "No account required", "No watermark"] },
       { "@type": "FAQPage", mainEntity: faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
     ],
   };

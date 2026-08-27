@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { LockKeyhole } from "lucide-react";
+import { BASE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
-const baseUrl = "https://private-pdf-toolkit.vercel.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Private PDF Toolkit - Free Client-Side PDF & Image Tools",
     template: "%s | Private PDF Toolkit",
@@ -16,10 +15,10 @@ export const metadata: Metadata = {
   description:
     "Merge, split, convert and compress PDF files privately in your browser. Free PDF tools with no uploads, accounts or watermarks.",
   verification: { google: "google4bf79fc737f0ba77" },
-  alternates: { canonical: baseUrl },
+  alternates: { canonical: BASE_URL },
   openGraph: {
     type: "website",
-    url: baseUrl,
+    url: BASE_URL,
     siteName: "Private PDF Toolkit",
     title: "Private PDF Toolkit - Your Files Never Leave Your Device",
     description: "Fast, free PDF and image tools that run entirely in your browser.",

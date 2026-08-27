@@ -38,4 +38,4 @@ Large files are constrained by the memory available to the browser. The compress
 
 The App Router pre-renders 39 focused tool pages from `app/[tool]/page.tsx`, each with canonical metadata, FAQ schema and WebApplication schema. The sitemap and robots output use the fixed production origin:
 
-`https://private-pdf-toolkit.vercel.app`
+`https://private-pdf-toolkit-gamma.vercel.app`

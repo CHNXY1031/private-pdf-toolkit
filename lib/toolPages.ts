@@ -1,7 +1,5 @@
 import type { ToolMode } from "@/components/PdfToolkit";
 
-export const SITE_URL = "https://private-pdf-toolkit.vercel.app";
-
 export type ToolPage = {
   slug: string;
   mode: ToolMode;
